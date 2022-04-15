@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+.header {
+  background-color: hsl(0, 0%, 22%);
+
+  .top-header {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+
+    &__left {
+      display: flex;
+    }
+
+    &__wrapper {
+      padding-left: rem(9);
+      padding-right: rem(9);
+    }
+
+    &__icon {
+      display: flex;
+      padding-left: rem(9);
+      padding-right: rem(9);
+
+      &:not(:last-child) {
+        border-right: 1px solid rgb(66, 66, 66);
+      }
+
+      p {
+        flex: 1;
+      }
+    }
+
+    &__right {
+      a {
+        color: white;
+        font-size: rem(14);
+        padding-right: rem(20);
+        padding-left: rem(20);
+        &:nth-child(-n + 3) {
+          border-right: 1px solid rgb(66, 66, 66);
+        }
+
+        &:nth-child(4) {
+          position: relative;
+          &::before {
+            content: "/";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}

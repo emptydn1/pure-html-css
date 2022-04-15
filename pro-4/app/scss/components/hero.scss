@@ -1,0 +1,37 @@
+@use "../utils" as *;
+
+.hero {
+  display: block;
+  .container {
+  }
+
+  &__main {
+    h1 {
+      font-size: rem(120);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-weight: 400;
+      text-transform: capitalize;
+      font-size: rem(40);
+    }
+  }
+
+  &__play {
+    display: flex;
+    align-items: center;
+    gap: 0 rem(30);
+    margin-top: mb(60, 1.2, 40, 1.2, 18);
+    img {
+      @include breakpoint-down(small) {
+        width: 20px;
+      }
+    }
+    p {
+      font-size: rem(18);
+      font-family: var(--f-open);
+      font-weight: 400;
+    }
+  }
+}

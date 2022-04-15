@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+.feature {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    text-align: left;
+  }
+  &__content {
+    padding: rem(55) 0;
+    padding-right: rem(28);
+    span {
+      font-family: var(--font-rale);
+      font-size: rem(30);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+    p {
+      font-weight: 400;
+      &:nth-child(1) {
+        font-family: var(--font-rale);
+        font-weight: 400;
+        font-size: rem(30);
+        font-style: italic;
+      }
+    }
+  }
+}

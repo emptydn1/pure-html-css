@@ -1,0 +1,68 @@
+@use "../utils" as *;
+
+.testimonials {
+  text-align: center;
+  padding-bottom: rem(490);
+
+  &__title {
+    max-width: rem(500);
+    margin: 0 auto;
+  }
+
+  &__list {
+    margin-top: mb(80, 1.889, 18, 0, 0);
+  }
+  &__item {
+    position: relative;
+    padding: rem(78) rem(100);
+    width: rem(830);
+    // margin: 0 auto;
+    border-radius: rem(10);
+    background-color: rgb(34, 40, 49);
+    box-shadow: 0 30px 70px 0 rgba(40, 47, 58, 0.5);
+    opacity: 0.3;
+    &.is-selected {
+      opacity: 1;
+    }
+    &:not(:last-child) {
+      margin-right: rem(70);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../../app/img/testimon/quote.png");
+      z-index: 9;
+      top: 0;
+      background-repeat: no-repeat;
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(50);
+      height: rem(50);
+      background-size: 100%;
+    }
+    .quote {
+      font-size: rem(30);
+      font-family: var(--f-open);
+      color: rgb(238, 238, 238);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .img-temp {
+      display: inline-block;
+      width: rem(50);
+      height: rem(50);
+      background-color: gray;
+      border-radius: 9999px;
+      margin-top: mb(50, 1.6, 30, 0, 0);
+    }
+
+    .name {
+      font-size: rem(18);
+      color: rgb(160, 168, 181);
+      font-weight: 700;
+      line-height: 1.278;
+      margin-top: mb(30, 0, 0, 1.278, 18);
+    }
+  }
+}

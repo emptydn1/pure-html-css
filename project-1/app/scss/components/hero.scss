@@ -1,0 +1,49 @@
+@use '../utils' as *;
+
+.hero {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(224, 28%, 92%),
+    hsl(210, 100%, 99%)
+  );
+
+  .container {
+    @include breakpoint(large) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__content {
+    text-align: center;
+    @include breakpoint(large) {
+      text-align: left;
+      flex: 1;
+      order: 1;
+    }
+
+    h1 {
+      font-size: rem(64);
+      padding-bottom: rem(70);
+    }
+    p {
+      font-size: rem(24);
+      padding-bottom: rem(66);
+    }
+  }
+  &__image {
+    background-image: url("/app/images/hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: rem(420);
+    margin-top: rem(30);
+
+    @include breakpoint(large) {
+      flex: 0 0 60%;
+      order: 2;
+      min-height: rem(520);
+      margin: 0;
+    }
+  }
+}

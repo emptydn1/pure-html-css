@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+.go {
+  text-align: center;
+  &__title {
+    text-align: center;
+    max-width: rem(780);
+    margin: 0 auto;
+    margin-bottom: rem(82);
+    h2 {
+      color: #e2a355;
+      text-transform: uppercase;
+      font-size: rem(82);
+      transform: matrix(0.7614451893245, 0, 0, 0.76137036403311, 0, 0);
+      font-weight: 800;
+      line-height: 1.2;
+      transform-origin: top;
+    }
+    p {
+      font-size: rem(30);
+      color: rgb(127, 119, 112);
+      transform-origin: top;
+      line-height: 1.2;
+    }
+  }
+  &__grid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: rem(56);
+  }
+  &__item {
+    flex-basis: rem(340);
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    background-color: #7f7770;
+    padding: 0 rem(15);
+    text-align: left;
+    span {
+      transform: matrix(0.9982558667955, 0, 0, 1, 0, 0);
+      font-weight: 700;
+      line-height: 1.2;
+      font-size: rem(29);
+      padding-top: rem(58);
+      padding-bottom: rem(30);
+    }
+    p {
+      font-size: rem(23);
+      line-height: 1.2;
+      transform: matrix(0.9982558667955, 0, 0, 1, 0, 0);
+      padding-bottom: rem(72);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+.hiking {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    text-align: center;
+    h2 {
+      font-size: rem(58.275);
+      transform: matrix(1.00052548607462, 0, 0, 1.00099328626133, 0, 0);
+      line-height: 1.2;
+      font-weight: 600;
+      padding-bottom: rem(44);
+    }
+    p {
+      font-size: rem(29);
+      line-height: 1.2;
+      transform: matrix(1.00052548607462, 0, 0, 1.00099328626133, 0, 0);
+    }
+  }
+}

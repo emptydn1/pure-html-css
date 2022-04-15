@@ -1,0 +1,69 @@
+@use '../utils' as *;
+
+.innovative {
+  .container {
+    @include breakpoint(large) {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(194);
+    }
+  }
+  &__content {
+    text-align: center;
+    margin: rem(30);
+    @include breakpoint(large) {
+      text-align: left;
+      flex: 0 0 40%;
+      order: 1;
+      margin: 0;
+    }
+    h1 {
+      padding: rem(42);
+    }
+    p {
+      padding-bottom: rem(40);
+    }
+  }
+  &__images {
+    padding-top: rem(30);
+    @include breakpoint(large) {
+      position: relative;
+      flex: 0 0 rem(288);
+      order: 2;
+      margin: 0;
+    }
+
+    .images-1 {
+      background: url("/app/images/innovation/1.jpg") no-repeat center right;
+      background-size: cover;
+      border-radius: rem(15);
+      clip-path: polygon(100% 0, 100% 5%, 70% 100%, 0 100%, 0 0);
+      transform: translateY(rem(-30));
+      min-height: rem(296);
+    }
+
+    .images-2 {
+      background: url("/app/images/innovation/2.jpg") no-repeat 0 center;
+      background-size: cover;
+      border-radius: rem(15);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 95%);
+      min-height: rem(296);
+      position: absolute;
+      right: -70%;
+      top: 30%;
+      width: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: url("/app/images/innovation/2.jpg") no-repeat -16% -5px;
+        background-size: cover;
+        border-radius: rem(15);
+        width: 100%;
+        min-height: rem(296);
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

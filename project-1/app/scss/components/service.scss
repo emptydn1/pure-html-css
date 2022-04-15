@@ -1,0 +1,123 @@
+@use '../utils' as *;
+
+// eef1f7   ffffff
+
+.service {
+  position: relative;
+  .container--md {
+    position: relative;
+    padding-bottom: rem(292);
+  }
+
+  &::before {
+    background-image: linear-gradient(90deg, #eef1f7, #fff);
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    height: 10%;
+    top: 0;
+    @include breakpoint(large) {
+      height: 48%;
+      width: 100%;
+      top: -3%;
+    }
+  }
+  &::after {
+    content: "";
+    height: 10%;
+    position: absolute;
+    right: 0;
+    top: -3%;
+    width: 90%;
+    z-index: -1;
+    @include breakpoint(large) {
+      height: 56%;
+      right: 0;
+      top: -25%;
+      width: 75%;
+      z-index: -1;
+    }
+    background-image: linear-gradient(
+      90deg,
+      rgb(238, 241, 247) 0%,
+      rgb(255, 255, 255) 100%
+    );
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+
+  &__content {
+    text-align: center;
+
+    @include breakpoint(large) {
+      margin-right: 0;
+      text-align: right;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+      margin: rem(10);
+      gap: rem(20);
+    }
+
+    @include breakpoint(large) {
+      margin: 0;
+      gap: rem(30);
+    }
+  }
+  &__item {
+    text-align: center;
+    padding: rem(47);
+    box-shadow: 0 0 rem(40) hsl(0, 0%, 84%);
+    margin: rem(30);
+    width: 100%;
+    border-radius: rem(15);
+    @include breakpoint(medium) {
+      margin: 0;
+      width: calc((100% - (30 * 0.0625rem)) / 2);
+    }
+
+    @include breakpoint(large) {
+      margin: 0;
+      width: calc((100% - (30 * 2 * 0.0625rem)) / 3);
+
+      &:nth-child(2),
+      &:nth-child(5) {
+        transform: translateY(rem(87));
+      }
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        transform: translateY(rem(87 * 2));
+      }
+    }
+
+    p {
+      padding-bottom: rem(48);
+      font-family: var(--font--poppins);
+      font-weight: 400;
+    }
+  }
+  &__icon {
+    margin-top: rem(25);
+    margin-bottom: rem(48);
+    margin-left: auto;
+    margin-right: auto;
+    width: rem(84);
+    height: rem(84);
+    img {
+      width: 100%;
+    }
+  }
+  &__arrow {
+    width: rem(42);
+    padding-bottom: rem(25);
+  }
+}

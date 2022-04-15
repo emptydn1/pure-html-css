@@ -1,0 +1,96 @@
+@use '../utils' as *;
+
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 999;
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: rem(120);
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  //   &__checkbox:checked ~ &__navigation {
+  //     visibility: visible;
+  //     opacity: 1;
+  //     width: 100%;
+  //   }
+
+  //button
+  &__btn-nav {
+    height: rem(30);
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    position: relative;
+    background-color: red;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: var(--color--bg);
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+    &::after {
+      top: 0.7rem;
+    }
+  }
+
+  //handle check
+  &__checkbox:checked + &__btn-nav &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__btn-nav &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__btn-nav &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: var(--font--overpass);
+    font-weight: 800;
+    a {
+      padding: rem(14) rem(17);
+      color: inherit;
+    }
+  }
+  &__button {
+    margin: 0 rem(15) 0 rem(13);
+  }
+  &__social {
+    display: inline-block;
+    a {
+      padding: rem(15);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use "../utils" as *;
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.589);
+  padding: rem(40) 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 0 rem(60);
+      li {
+        font-weight: 400;
+        font-family: var(--f-open);
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    gap: 0 rem(70);
+    img {
+      width: 30px;
+    }
+  }
+}

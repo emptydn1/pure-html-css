@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.arrow {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: rem(5) solid transparent;
+    border-right: rem(5) solid transparent;
+    border-bottom: rem(5) solid rgb(63, 63, 63);
+  }
+}

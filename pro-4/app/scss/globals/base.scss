@@ -1,0 +1,59 @@
+@use "../utils" as *;
+
+*,
+*::after,
+*::before {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%; //16px
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  //   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include breakpoint-down(medium) {
+    font-size: 56.25%;
+  }
+
+  @include breakpoint-down(small) {
+    font-size: 31.25%;
+  }
+  // @include respond(tab-land) {
+  //   // width < 992px?
+  //   font-size: percent(9); //1 rem = 9px, 9/16 = 5625
+  // }
+
+  //   @include respond(tab-port) {
+  //     // width < 768px?
+  //     font-size: percent(8); //1 rem = 8px, 8/16 = 0.5
+  //   }
+
+  //   @include respond(big-desktop) {
+  //     //1200 >
+  //     font-size: 75%; //1rem = 12, 12/16
+  //   }
+}
+
+body {
+  background-color: rgb(33, 39, 48);
+  line-height: 1.2;
+  color: hsl(0, 0%, 100%);
+  font-family: var(--f-rale);
+  overflow-x: hidden;
+}
+
+//matrix(a) * font-size = font-size
+//line-height = leading / font-size
+//http://pttopx.com/
+//If leading is auto : LineHeight = 120% of the font size ?????
+//distance_in_css = distance - (line-height_1 - 1.2 * font-size_1) / 2 - (line-height_2 - 1.2 * font-size_2) / 2
+// lnb-or-t=((fn * ln)-fn)/2
+//
+
+//https://community.adobe.com/t5/photoshop-ecosystem/a-script-for-measuring-the-distance-between-two-elements/td-p/9586509
+//https://stackoverflow.com/questions/47951219/how-to-measure-convert-css-text-margin-padding-in-the-photoshop
+// 50px - (120px - 1.2 * 100px) / 2 - (200px - 1.2 * 100px) / 2 = 50px - 0 - 40px = 10px;

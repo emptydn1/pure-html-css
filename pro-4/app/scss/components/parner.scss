@@ -1,0 +1,26 @@
+@use "../utils" as *;
+
+.parner {
+  .container {
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: mb(100, 2, 18, 0, 0);
+    gap: rem(30);
+  }
+
+  &__item {
+    display: grid;
+    place-items: center;
+    flex-basis: calc((100% - (3 * 30 * 0.0625rem)) / 4);
+    height: rem(180);
+    @include breakpoint-down(medium) {
+      flex-basis: calc((100% - (3 * 30 * 0.0625rem)) / 2);
+    }
+    border-radius: rem(10);
+    background-color: rgb(43, 49, 57);
+  }
+}

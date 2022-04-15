@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .parent {
+      }
+      img {
+        clip-path: url(#clipping);
+      }
+      .child {
+        position: relative;
+        background-image: url(../innovation/1.jpg);
+        clip-path: url(#clipping);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    </style>
+    <div class="parent">
+      <div class="child">
+        <svg>
+          <clipPath id="clipping">
+            <path
+              d="M445.549,5246.45L828.919,5199A17.082,17.082,0,0,1,846,5216.08v411.84A17.082,17.082,0,0,1,828.919,5645H417.081A17.082,17.082,0,0,1,400,5627.92l28.468-364.39A17.076,17.076,0,0,1,445.549,5246.45Z"
+              transform="translate(-400 -5199)"
+            />
+          </clipPath>
+        </svg>
+      </div>
+
+      <img src="../innovation/1.jpg" alt="" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+@use "../utils" as *;
+
+.start {
+  transform: translateY(45%);
+  //   &__img-1,
+  //   &__img-2 {
+  //     position: absolute;
+  //     object-fit: contain;
+  //     object-position: center;
+  //     pointer-events: none;
+  //   }
+
+  //   &__img-1 {
+  //     // top: -20%;
+  //     top: 0;
+  //     left: 0;
+  //   }
+
+  //   &__img-2 {
+  //     display: none;
+  //   }
+
+  &__main {
+    text-align: center;
+    position: relative;
+    padding: rem(145) rem(325);
+    border-radius: rem(30);
+    background: url("../../app/img/start/1.png") no-repeat cover/100%;
+    background-color: rgb(30, 36, 46);
+    z-index: 9;
+    
+
+    h2 {
+      font-size: rem(60);
+      font-weight: 700;
+      line-height: 1.267;
+    }
+
+    p {
+      font-size: rem(24);
+      font-family: var(--f-open);
+      color: rgb(160, 168, 181);
+      line-height: 1.5;
+      margin-top: mb(60, 1.267, 60, 1.5, 24);
+    }
+
+    a.btn.btn--big {
+      margin-top: mb(65, 1.5, 24, 0, 0);
+    }
+  }
+}

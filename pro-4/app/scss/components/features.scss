@@ -1,0 +1,59 @@
+@use "../utils" as *;
+
+.features {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 rem(30);
+
+    @include breakpoint-down(small) {
+      //check
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 150px;
+      grid-auto-flow: column;
+      gap: 1.5rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      grid-template-columns: unset;
+
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+
+      & > * {
+        scroll-snap-align: start;
+      }
+    }
+  }
+
+  &__item {
+    flex-basis: calc(100% / 3);
+    text-align: center;
+    padding: rem(75) rem(42) rem(70);
+    border-radius: rem(10);
+    background-color: rgb(43, 49, 57);
+  
+    img {
+      @include breakpoint-down(small) {
+        width: 30px;
+      }
+    }
+    h3 {
+      margin-top: mb(42, 0, 0, 1.591, 22);
+      font-size: rem(22);
+      line-height: 1.591;
+      font-weight: 800;
+    }
+    p {
+      margin-top: mb(34, 1.591, 22, 1.889, 18);
+    }
+  }
+}

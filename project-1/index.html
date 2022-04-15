@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="fontawesome-free-5.15.3-web/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.css" />
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;800&family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__content container container--sml">
+        <img src="app/images/logo.png" alt="" class="header__logo" />
+
+        <input type="checkbox" class="header__checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="hide-for-desktop header__btn-nav">
+          <span class="header__icon">&nbsp;</span>
+        </label>
+
+        <div class="header__navigation hide-for-mobile">
+          <div class="header__link">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Works</a>
+            <a href="#">News</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <a href="#" class="btn btn--non-bg header__button hide-for-mobile"
+            >Get A Quote</a
+          >
+
+          <div class="header__social hide-for-mobile">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <title>Facebook</title>
+                <path
+                  fill="#3b5998"
+                  d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                <title>YouTube</title>
+                <path
+                  fill="#ff1e00"
+                  d="M10.333 0c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.701 14.077c-1.752.12-5.653.12-7.402 0C4.735 13.947 4.514 13.018 4.5 10c.014-3.024.237-3.947 2.132-4.077 1.749-.12 5.651-.12 7.402 0 1.898.13 2.118 1.059 2.133 4.077-.015 3.024-.238 3.947-2.133 4.077zM8.667 8.048l4.097 1.949-4.097 1.955V8.048z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
+                <title>Twitter</title>
+                <path
+                  fill="#1da1f2"
+                  d="M20.667 2.797a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.606.996A4.096 4.096 0 0014.513.873c-2.649 0-4.595 2.472-3.997 5.038a11.648 11.648 0 01-8.457-4.287 4.109 4.109 0 001.27 5.478A4.086 4.086 0 011.47 6.59c-.045 1.901 1.317 3.68 3.29 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.834 2.85 8.25 8.25 0 01-6.075 1.7 11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.662-12.205a8.354 8.354 0 002.048-2.124z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                <title>Instagram</title>
+                <path
+                  fill="#dd4b39"
+                  d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container container--lg">
+        <div class="hero__content">
+          <h1>Work Smartly with Endless Possibility</h1>
+          <p>
+            Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exerction
+          </p>
+          <a href="" class="btn btn--bg">Get Started</a>
+        </div>
+        <div class="hero__image"></div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="container container--md">
+        <div class="feature__content">
+          <h2>Build trust first</h2>
+          <h1>Control your business with a single tap</h1>
+        </div>
+
+        <div class="feature__grid">
+          <div class="feature__item">
+            <img src="app/images/feature/1.png" alt="" class="feature__icon" />
+            <h4>Complete business Control</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+          </div>
+
+          <div class="feature__item">
+            <img src="app/images/feature/2.png" alt="" class="feature__icon" />
+            <h4>Critical analytics and report</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+          </div>
+
+          <div class="feature__item">
+            <img src="app/images/feature/3.png" alt="" class="feature__icon" />
+            <h4>User satisfaction guarranted</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="innovative">
+      <div class="container">
+        <div class="innovative__content">
+          <h1>Most innovative creative team</h1>
+          <p>
+            Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exerction
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excep teur sint occae cat
+            cupidatat non proident, sunt in culpa qui officia deser unt mollit
+            anim id est laborum.
+          </p>
+          <div class="btn btn--bg">Know More</div>
+        </div>
+
+        <div class="innovative__images hide-for-mobile">
+          <div class="images-1"></div>
+          <div class="images-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="container container--md">
+        <div class="service__content container-sm">
+          <h2>What we do</h2>
+          <h1>Service to solve all kinds of business problem</h1>
+        </div>
+
+        <div class="service__grid">
+          <div class="service__item">
+            <div class="service__icon">
+              <img src="app/images/service/1.png" alt="" />
+            </div>
+            <h4>Business Automation</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+            <img src="app/images/service/7.png" alt="" class="service__arrow" />
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <img src="app/images/service/2.png" alt="" />
+            </div>
+            <h4>Ecommerce Support</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+            <img src="app/images/service/7.png" alt="" class="service__arrow" />
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <img src="app/images/service/3.png" alt="" />
+            </div>
+            <h4>Video Production</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+            <img src="app/images/service/7.png" alt="" class="service__arrow" />
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <img src="app/images/service/4.png" alt="" />
+            </div>
+            <h4>Realtime Support</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+            <img src="app/images/service/7.png" alt="" class="service__arrow" />
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <img src="app/images/service/5.png" alt="" />
+            </div>
+            <h4>Location Marking</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+            <img src="app/images/service/7.png" alt="" class="service__arrow" />
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <img src="app/images/service/6.png" alt="" />
+            </div>
+            <h4>File Upload Protocol</h4>
+            <p>
+              Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              trud exerci tation
+            </p>
+            <img src="app/images/service/7.png" alt="" class="service__arrow" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="container container--md">
+        <div class="project__content container-sm">
+          <h2>Our Projects</h2>
+          <h1>Check the real innovation of problem solving</h1>
+        </div>
+
+        <div class="project__grid">
+          <div class="project__item">
+            <div class="project__image">
+              <img src="app/images/project/1.jpg" alt="" />
+              <svg style="border-color: hsl(347, 86%, 92%)">
+                <clipPath id="clipPath1" clipPathUnits="userSpaceOnUse">
+                  <path
+                    fill-rule="evenodd"
+                    fill="transparent"
+                    d="M45.549,47.446 L428.919,-0.001 C438.353,-0.001 446.000,7.646 446.000,17.080 L446.000,428.919 C446.000,438.352 438.353,446.000 428.919,446.000 L17.081,446.000 C7.647,446.000 -0.000,438.352 -0.000,428.919 L28.468,64.527 C28.468,55.093 36.115,47.446 45.549,47.446 Z"
+                  />
+                </clipPath>
+              </svg>
+            </div>
+
+            <div class="project__info">
+              <h3 style="color: hsl(347, 86%, 92%)">Development</h3>
+              <h5>Jodi kokhono vul hoye jay tumi oporadh nio na</h5>
+              <p>
+                Excepteur sint occae cat cupidatat non proident, sunt in culpa
+                qui officia deser unt mollit a do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.
+              </p>
+              <a href="#" class="btn btn--non-bg">View Project</a>
+            </div>
+          </div>
+
+          <div class="project__item">
+            <div class="project__image">
+              <img src="app/images/project/2.jpg" alt="" />
+              <svg style="border-color: hsl(156, 64%, 87%)">
+                <clipPath id="clipPath2" clipPathUnits="userSpaceOnUse">
+                  <path
+                    fill-rule="evenodd"
+                    fill="transparent"
+                    d="M45.549,47.446 L428.919,-0.001 C438.353,-0.001 446.000,7.646 446.000,17.080 L446.000,428.919 C446.000,438.352 438.353,446.000 428.919,446.000 L17.081,446.000 C7.647,446.000 -0.000,438.352 -0.000,428.919 L28.468,64.527 C28.468,55.093 36.115,47.446 45.549,47.446 Z"
+                  />
+                </clipPath>
+              </svg>
+            </div>
+
+            <div class="project__info">
+              <h3 style="color: hsl(156, 64%, 87%)">Research & Analytics</h3>
+              <h5>Ei biristi veja rate tuminei bole somoy amar katena</h5>
+              <p>
+                Excepteur sint occae cat cupidatat non proident, sunt in culpa
+                qui officia deser unt mollit a do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.
+              </p>
+              <a href="#" class="btn btn--non-bg">View Project</a>
+            </div>
+          </div>
+
+          <div class="project__item">
+            <div class="project__image">
+              <img src="app/images/project/3.jpg" alt="" />
+              <svg style="border-color: hsl(29, 68%, 84%)">
+                <clipPath id="clipPath3" clipPathUnits="userSpaceOnUse">
+                  <path
+                    fill-rule="evenodd"
+                    fill="transparent"
+                    d="M45.549,47.446 L428.919,-0.001 C438.353,-0.001 446.000,7.646 446.000,17.080 L446.000,428.919 C446.000,438.352 438.353,446.000 428.919,446.000 L17.081,446.000 C7.647,446.000 -0.000,438.352 -0.000,428.919 L28.468,64.527 C28.468,55.093 36.115,47.446 45.549,47.446 Z"
+                  />
+                </clipPath>
+              </svg>
+            </div>
+
+            <div class="project__info">
+              <h3 style="color: hsl(29, 68%, 84%)">UI/UX Engineering</h3>
+              <h5>Ami jare chaire se thake mori ontore</h5>
+              <p>
+                Excepteur sint occae cat cupidatat non proident, sunt in culpa
+                qui officia deser unt mollit a do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.
+              </p>
+              <a href="#" class="btn btn--non-bg">View Project</a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn--under project__button">Go to Portfolio</a>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="container container--md">
+        <div class="team__content container-sm">
+          <h2>Meet otur team</h2>
+          <h1>Awesome people with great business skills</h1>
+        </div>
+
+        <svg>
+          <clipPath id="clipPathn" clipPathUnits="userSpaceOnUse">
+            <path
+              fill-rule="evenodd"
+              fill="transparent"
+              d="M45.000,-0.001 L255.000,-0.001 C263.284,-0.001 270.000,6.715 270.000,15.000 L270.000,296.999 C270.000,305.283 263.284,311.999 255.000,311.999 L15.000,311.999 C6.716,311.999 -0.000,305.283 -0.000,296.999 L30.000,15.000 C30.000,6.715 36.716,-0.001 45.000,-0.001 Z"
+            />
+          </clipPath>
+        </svg>
+        <svg>
+          <clipPath id="clipPathn1" clipPathUnits="userSpaceOnUse">
+            <path
+              fill-rule="evenodd"
+              fill="rgb(51, 46, 152)"
+              d="M225.000,-0.000 L15.000,-0.000 C6.716,-0.000 -0.000,6.715 -0.000,14.999 L-0.000,297.000 C-0.000,305.284 6.716,311.999 15.000,311.999 L255.000,311.999 C263.284,311.999 270.000,305.284 270.000,297.000 L240.000,14.999 C240.000,6.715 233.284,-0.000 225.000,-0.000 Z"
+            />
+          </clipPath>
+        </svg>
+
+        <div class="team__grid">
+          <div class="team__item">
+            <img src="app/images/team/1.jpg" alt="" class="team__image" />
+
+            <h4>Bruce Wayne</h4>
+            <p>Founder & CEO</p>
+          </div>
+
+          <div class="team__item">
+            <img src="app/images/team/2.jpg" alt="" class="team__image" />
+            <h4>Clark tent</h4>
+            <p>Manager</p>
+          </div>
+
+          <div class="team__item">
+            <img src="app/images/team/3.jpg" alt="" class="team__image" />
+            <h4>Jessica Parker</h4>
+            <p>Developer</p>
+          </div>
+
+          <div class="team__item">
+            <img src="app/images/team/4.jpg" alt="" class="team__image" />
+            <h4>Justin Pakerman</h4>
+            <p>Designer</p>
+          </div>
+        </div>
+
+        <div class="testimonial hide-for-mobile">
+          <div class="testimonial__carousel">
+            <div class="testimonial__content active">
+              <h2>Testimonial</h2>
+              <h1>They are awesome!1</h1>
+              <p>
+                Kollit a do eiusmod tempor incididunt ut labore et do irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.
+              </p>
+              <div class="name">
+                <h5>Kabir Manja</h5>
+                <p>Music Producer</p>
+              </div>
+            </div>
+
+            <div class="testimonial__content">
+              <h2>Testimonial</h2>
+              <h1>They are awesome!2</h1>
+              <p>
+                Kollit a do eiusmod tempor incididunt ut labore et do irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.
+              </p>
+              <div class="name">
+                <h5>Kabir Manja</h5>
+                <p>Music Producer</p>
+              </div>
+            </div>
+
+            <div class="testimonial__content">
+              <h2>Testimonial</h2>
+              <h1>They are awesome!3</h1>
+              <p>
+                Kollit a do eiusmod tempor incididunt ut labore et do irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.
+              </p>
+              <div class="name">
+                <h5>Kabir Manja</h5>
+                <p>Music Producer</p>
+              </div>
+            </div>
+            <div class="testimonial__button">
+              <div class="active"></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+          <div class="testimonial__image">
+            <img src="app/images/tesmional/1.jpg" alt="" />
+
+            <svg>
+              <clipPath id="testimonial" clipPathUnits="userSpaceOnUse">
+                <path
+                  fill-rule="evenodd"
+                  fill="rgb(238, 238, 238)"
+                  d="M21.000,50.000 L449.000,-0.000 C460.598,-0.000 470.000,9.401 470.000,20.999 L470.000,582.999 C470.000,594.597 460.598,603.999 449.000,603.999 L21.000,603.999 C9.402,603.999 -0.000,594.597 -0.000,582.999 L-0.000,70.999 C-0.000,59.401 9.402,50.000 21.000,50.000 Z"
+                />
+              </clipPath>
+            </svg>
+            <svg id="sss">
+              <path
+                fill-rule="evenodd"
+                stroke-width="6px"
+                stroke="rgb(84, 214, 161)"
+                fill-opacity="0"
+                fill="rgb(26, 228, 190)"
+                d="M32.000,224.999 L244.000,264.999 C255.598,264.999 265.000,255.597 265.000,243.999 L265.000,32.000 C265.000,20.401 255.598,10.999 244.000,10.999 L32.000,10.999 C20.402,10.999 11.000,20.401 11.000,32.000 L11.000,203.999 C11.000,215.597 20.402,224.999 32.000,224.999 Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container container--md">
+        <div class="contact__content container-sm">
+          <h2>Contact Us</h2>
+          <h1>Stay connected with us for any reason</h1>
+        </div>
+        <svg>
+          <defs>
+            <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+              <stop
+                offset="0%"
+                stop-color="rgb(255,255,255)"
+                stop-opacity="0.50196"
+              />
+              <stop
+                offset="100%"
+                stop-color="rgb(60,60,60)"
+                stop-opacity="0.6"
+              />
+            </linearGradient>
+          </defs>
+          <path
+            fill-rule="evenodd"
+            opacity="0.059"
+            fill="rgb(249, 250, 253)"
+            d="M261.000,109.999 L1270.000,-0.001 C1281.598,-0.001 1291.000,9.402 1291.000,20.999 L1291.000,848.999 C1291.000,860.597 1281.598,869.999 1270.000,869.999 L21.000,869.999 C9.402,869.999 0.000,860.597 0.000,848.999 L240.000,130.999 C240.000,119.401 249.402,109.999 261.000,109.999 Z"
+          />
+          <path
+            fill="url(#PSgrad_0)"
+            d="M261.000,109.999 L1270.000,-0.001 C1281.598,-0.001 1291.000,9.402 1291.000,20.999 L1291.000,848.999 C1291.000,860.597 1281.598,869.999 1270.000,869.999 L21.000,869.999 C9.402,869.999 0.000,860.597 0.000,848.999 L240.000,130.999 C240.000,119.401 249.402,109.999 261.000,109.999 Z"
+          />
+        </svg>
+        <div class="contact__grid">
+          <div class="contact__form">
+            <h3>Write us a message</h3>
+            <input type="text" placeholder="your name" />
+            <input type="text" placeholder="your email" />
+            <input type="text" placeholder="Subject" />
+            <textarea placeholder="Start Writing message here"></textarea>
+            <a href="#" class="btn btn--bg">Get Started</a>
+          </div>
+
+          <div class="contact__right">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor inci didunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="contact__info">
+              <div
+                class="contact__icon"
+                style="background-color: var(--color--h2-contact-1)"
+              >
+                <i class="fas fa-phone"></i>
+              </div>
+
+              <div class="contact__phone">
+                <h6>Phone</h6>
+                <p>0123-4567-8910</p>
+              </div>
+            </div>
+
+            <div class="contact__info">
+              <div
+                class="contact__icon"
+                style="background-color: var(--color--h2-contact-2)"
+              >
+                <i class="fas fa-envelope"></i>
+              </div>
+
+              <div class="contact__phone">
+                <h6>Email</h6>
+                <p>hello@rainydesign.com</p>
+              </div>
+            </div>
+
+            <div class="contact__info">
+              <div
+                class="contact__icon"
+                style="background-color: var(--color--h2-contact-3)"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+
+              <div class="contact__phone">
+                <h6>Address</h6>
+                <p>20, Bordeshi, Amin Bazar Savar, Dhaka</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container container--md">
+        <div class="blog__content">
+          <h2>From Our Blog</h2>
+          <h1>Get lastest update</h1>
+        </div>
+
+        <div class="blog__grid">
+          <div class="blog__item">
+            <h5 style="color: var(--color--h2-contact-1)">App Development</h5>
+            <h4>When the musics over turn off the light</h4>
+            <p>
+              Excep teur sint occae cat cupid atat non proident, sunt in culpa
+              qui officia deser unt mollit ..
+            </p>
+            <figure>
+              <img src="app/images/blog/1.jpg" alt="" />
+              <figcaption>
+                Sharmin Eity
+                <div class="blog__icon">
+                  <i class="fas fa-heart"></i>
+                  <p>22</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="blog__item">
+            <h5 style="color: var(--color--h2-contact-2)">Design</h5>
+            <h4>When the musics over turn off the light</h4>
+            <p>
+              Excep teur sint occae cat cupid atat non proident, sunt in culpa
+              qui officia deser unt mollit ..
+            </p>
+            <figure>
+              <img src="app/images/blog/2.jpg" alt="" />
+              <figcaption>
+                Sanjida Ema
+                <div class="blog__icon">
+                  <i class="fas fa-heart"></i>
+                  <p>22</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="blog__item">
+            <h5 style="color: var(--color--h2-contact-3)">Research</h5>
+            <h4>When the musics over turn off the light</h4>
+            <p>
+              Excep teur sint occae cat cupid atat non proident, sunt in culpa
+              qui officia deser unt mollit ..
+            </p>
+            <figure>
+              <img src="app/images/blog/3.jpg" alt="" />
+              <figcaption>
+                Nayna Eva
+                <div class="blog__icon">
+                  <i class="fas fa-heart"></i>
+                  <p>22</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container container--md">
+        <div class="footer__content">
+          <img src="app/images/logo.png" alt="" />
+          <p>
+            Fectetur adipisicing elit, sed do eius mod tempor Lorem ipsum dolor
+            sit amet, con sectetur adipisicing elitt ut labore
+          </p>
+          <div class="input1">
+            <input type="text" id="input1" placeholder="Submit email" />
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+
+        <div class="footer__about">
+          <h5>About</h5>
+          <a href="#">About Us</a>
+          <a href="#">About Us</a>
+          <a href="#">Our Stoiry</a>
+          <a href="#">Success</a>
+          <a href="#">Support</a>
+        </div>
+        <div class="footer__service">
+          <h5>Service</h5>
+          <a href="#">Development</a>
+          <a href="#">Maintanance</a>
+          <a href="#">Consultancy</a>
+          <a href="#">Design</a>
+        </div>
+        <div class="footer__touch">
+          <h5>Get in Touch</h5>
+          <div class="footer__icon">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>22/1 Bardeshi, Amin Bazar Dhaka 1348</p>
+          </div>
+
+          <div class="footer__icon">
+            <i class="fas fa-envelope"></i>
+            <p>xuwelkhan@gmail.com</p>
+          </div>
+
+          <div class="footer__icon">
+            <i class="fas fa-phone"></i>
+            <p>+88 01679 252595</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script defer src="/dist/1.js"></script>
+  </body>
+</html>

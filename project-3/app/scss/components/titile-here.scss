@@ -1,0 +1,50 @@
+@use '../utils' as *;
+
+.title-here {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    padding-top: rem(230);
+    padding-bottom: rem(230);
+  }
+
+  .wrapper {
+    max-width: rem(900);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .wrap-input {
+    position: relative;
+    max-width: rem(800);
+    margin: 0 auto;
+  }
+
+  span {
+    font-size: rem(74.1017152);
+    font-weight: 800;
+    line-height: 1.2;
+    padding-bottom: rem(74);
+  }
+
+  p {
+    font-size: rem(23);
+    padding-bottom: rem(64);
+  }
+
+  input {
+    width: 100%;
+    padding: rem(22) rem(36);
+    border-radius: 9999px;
+    outline: none;
+    border: none;
+  }
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

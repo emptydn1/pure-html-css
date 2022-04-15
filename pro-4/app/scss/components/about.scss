@@ -1,0 +1,44 @@
+@use "../utils" as *;
+
+.about {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(100);
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__left {
+    max-width: rem(470);
+    @include breakpoint-down(medium) {
+      text-align: center;
+    }
+    a {
+      margin-top: mb(65, 1.889, 18, 0, 0);
+    }
+  }
+
+  &__image {
+    position: relative;
+    max-width: rem(600);
+
+    @include breakpoint-down(medium) {
+      text-align: center;
+      max-width: none;
+    }
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+
+  &__img {
+    left: 48%;
+    position: absolute;
+    top: 54%;
+    transform: translate(-50%, -50%);
+  }
+}

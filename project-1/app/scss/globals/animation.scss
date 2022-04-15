@@ -1,0 +1,44 @@
+// // https://stackoverflow.com/questions/3331353/transitions-on-the-css-display-property
+
+// @keyframes fade-in {
+//   from {
+//     opacity: 0;
+//     transform: translateX(100%);
+//   }
+//   99% {
+//     height: auto;
+//     opacity: 1;
+//   }
+//   to {
+//     height: auto;
+//     opacity: 1;
+//     overflow: visible;
+//     transform: translateX(0);
+//   }
+// }
+// .fade-in {
+//   animation: fade-in 1s ease-in-out forwards;
+// }
+
+// @keyframes fade-out {
+//   from {
+//     height: auto;
+//     opacity: 1;
+//     overflow: hidden;
+//     transform: translateX(0);
+//   }
+//   99% {
+//     height: 0;
+//     opacity: 0;
+//     height: auto;
+//   }
+//   to {
+//     transform: translateX(-100%);
+//     height: auto !important;
+//     opacity: 0;
+//     overflow: hidden;
+//   }
+// }
+// .fade-out {
+//   animation: fade-out 1s ease-in-out forwards;
+// }

@@ -1,0 +1,43 @@
+@use "../utils" as *;
+
+.experience {
+  .container {
+    gap: 0 rem(30);
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    position: relative;
+    text-align: center;
+    flex-basis: rem(670);
+    font-size: rem(400);
+    font-family: var(--f-open);
+    font-weight: 800;
+    color: hsl(227, 35%, 56%);
+    text-transform: uppercase;
+    line-height: 0.088;
+    padding: rem(145) 0;
+    background-image: url("./../app/img/experience/1.png");
+    background-position-x: 20%;
+    background-position-y: 45%;
+    background-repeat: no-repeat;
+    background-size: 94%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("./../app/img/experience/2.png");
+      left: 55%;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &__title {
+    flex-basis: rem(470);
+  }
+}

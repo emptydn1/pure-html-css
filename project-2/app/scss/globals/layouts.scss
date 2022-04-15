@@ -1,0 +1,108 @@
+@use '../utils' as *;
+
+.container-lg {
+  max-width: rem(1920);
+  margin: 0 auto;
+}
+
+// Spacing
+.container {
+  max-width: rem(1170);
+  margin: 0 auto;
+
+  // &--lr-sm {
+  //   padding-left: rem(30);
+  //   padding-right: rem(30);
+  //   padding-top: rem(0);
+  //   padding-bottom: rem(0);
+  // }
+  &--b {
+    padding-top: rem(40);
+    padding-bottom: rem(76);
+  }
+
+  &--tb-sm {
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+    padding-left: rem(0);
+    padding-right: rem(0);
+  }
+
+  &--tb-sm-md {
+    padding-top: rem(38);
+    padding-bottom: rem(38);
+    padding-left: rem(0);
+    padding-right: rem(0);
+  }
+
+  &--tb-md {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    padding-left: rem(0);
+    padding-right: rem(0);
+  }
+
+  &--tb-lg {
+    padding-top: rem(164);
+    padding-bottom: rem(164);
+    padding-left: rem(0);
+    padding-right: rem(0);
+  }
+
+  //   &--pall {
+  //     padding-top: 4.375rem;
+  //     padding-right: 1.5rem;
+  //     padding-bottom: 4.375rem;
+  //     padding-left: 1.5rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-top: 6rem;
+  //       padding-bottom: 6rem;
+  //     }
+  //   }
+  //   &--py {
+  //     padding-top: 4.375rem;
+  //     padding-bottom: 4.375rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-top: 6rem;
+  //       padding-bottom: 6rem;
+  //     }
+  //   }
+  //   &--px {
+  //     padding-right: 1.5rem;
+  //     padding-left: 1.5rem;
+  //   }
+  //   &--pt {
+  //     padding-top: 4.375rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-top: 6rem;
+  //     }
+  //   }
+  //   &--pr {
+  //     padding-right: 1.5rem;
+  //   }
+  //   &--pb {
+  //     padding-bottom: 4.375rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-bottom: 6rem;
+  //     }
+  //   }
+  //   &--pl {
+  //     padding-left: 1.5rem;
+  //   }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none !important;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint(large) {
+    display: none !important;
+  }
+}

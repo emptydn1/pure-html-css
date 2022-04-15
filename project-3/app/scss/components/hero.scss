@@ -1,0 +1,47 @@
+@use '../utils' as *;
+
+.hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__content {
+    max-width: 35%;
+
+    h1 {
+      color: #deb37e;
+      font-weight: 800;
+      font-size: rem(59.283);
+      text-shadow: 0px 5px 5px rgba(84, 82, 79, 0.22);
+      line-height: 1.2;
+      transform: matrix(
+        1.54629318703535,
+        0.00739011214916,
+        -0.00738982767634,
+        1.54623366447847,
+        0,
+        0
+      );
+      padding-bottom: rem(33);
+    }
+    span {
+      display: block;
+      color: rgb(84, 82, 79);
+      font-size: rem(23);
+      font-weight: 700;
+      font-style: italic;
+      transform: matrix(1.08511372179571, 0, 0, 1.08511372179571, 0, 0);
+      line-height: 1.2;
+      padding-bottom: rem(67);
+    }
+    .btn {
+      margin-bottom: rem(25);
+    }
+    p {
+      color: rgb(84, 82, 79);
+      font-style: italic;
+      transform: matrix(1.08511372179571, 0, 0, 1.08511372179571, 0, 0);
+      font-size: rem(19);
+      line-height: 1.2;
+    }
+  }
+}

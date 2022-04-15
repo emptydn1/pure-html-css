@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.btn {
+  display: inline-block;
+  font-size: rem(25);
+  line-height: 1.2;
+  transform: matrix(0.99890404734599, 0, 0, 0.99923840784619, 0, 0);
+  transform-origin: left bottom;
+  padding: rem(15) rem(38);
+  background-color: rgb(119, 108, 100);
+  border-radius: 9999px;
+  font-weight: 800;
+  text-transform: uppercase;
+  &--bg {
+    background-color: #e2a355;
+  }
+}

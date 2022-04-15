@@ -1,0 +1,226 @@
+@use '../utils' as *;
+
+.team {
+  position: relative;
+  text-align: center;
+  .container {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: linear-gradient(
+        90deg,
+        rgb(238, 241, 247) 0%,
+        rgb(249, 252, 255) 100%
+      );
+      opacity: 0.451;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 40%;
+      width: 70%;
+      background-image: linear-gradient(
+        90deg,
+        rgb(238, 241, 247) 0%,
+        rgb(247, 249, 252) 100%
+      );
+      opacity: 0.722;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      z-index: -1;
+    }
+  }
+
+  &__grid {
+    margin-bottom: rem(180);
+    @include breakpoint(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: rem(28);
+    }
+    @include breakpoint(large) {
+      text-align: left;
+    }
+  }
+
+  &__item {
+    @include breakpoint(medium) {
+      width: calc((100% - (28 * 0.0625rem)) / 2);
+    }
+    @include breakpoint(large) {
+      width: calc((100% - (3 * 28 * 0.0625rem)) / 4);
+    }
+  }
+
+  svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+  }
+
+  &__item {
+    margin-bottom: rem(20);
+    @include breakpoint(large) {
+      margin: 0;
+    }
+
+    img {
+      margin-bottom: rem(20);
+      width: rem(270);
+      height: rem(312);
+      object-fit: none;
+      object-position: center top;
+
+      @include breakpoint(large) {
+        margin-bottom: rem(45);
+      }
+    }
+    h4 {
+      padding-bottom: rem(22);
+    }
+
+    @include breakpoint(large) {
+      &:nth-child(2n + 1) {
+        transform: translateY(-10%);
+      }
+      &:nth-child(2n) {
+        transform: translateY(10%);
+      }
+    }
+
+    &:nth-child(2n + 1) img {
+      clip-path: url(#clipPathn);
+    }
+    &:nth-child(2n) img {
+      clip-path: url(#clipPathn1);
+    }
+
+    &:nth-child(3) img {
+      object-position: 30% top;
+    }
+
+    &:nth-child(4) img {
+      object-position: 90% top;
+    }
+  }
+
+  .testimonial {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(150);
+    text-align: left;
+    // &__checkbox {
+    //   display: none;
+    // }
+
+    &__carousel {
+      position: relative;
+      flex: 1;
+    }
+    &__content {
+      position: relative;
+      // margin-bottom: rem(55);
+      opacity: 0;
+      height: 0;
+      transition: 1s;
+      //   transform: translateX(-100%);
+      //   transition: 0.5s ease-out;
+      //   transition: opacity 0.5s ease-out;
+      //   transition: height 0s, opacity 2.5s linear;
+      overflow: hidden;
+
+      &::before {
+        content: "\201C";
+        position: absolute;
+        top: -10%;
+        left: -20%;
+        line-height: 1;
+        font-size: 20rem;
+        color: #c5dad6;
+        font-family: sans-serif;
+        z-index: 1;
+      }
+
+      &.active {
+        height: auto;
+        opacity: 1;
+        overflow: visible;
+      }
+
+      h1 {
+        padding-bottom: rem(66);
+      }
+      p {
+        padding-bottom: rem(74);
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        h5 {
+          padding: 0;
+          padding-right: rem(15);
+        }
+        p {
+          padding: 0;
+        }
+      }
+    }
+
+    &__button {
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      z-index: 40;
+      div {
+        display: inline-block;
+        background-color: var(--color--bg);
+        border-radius: rem(9999);
+        width: rem(10);
+        height: rem(10);
+        margin: rem(5);
+        transition: 0.5s;
+        &.active {
+          width: rem(25);
+        }
+      }
+    }
+
+    &__image {
+      position: relative;
+      flex: 1;
+      img {
+        width: rem(470);
+        height: rem(604);
+        clip-path: url(#testimonial);
+        position: relative;
+        z-index: 2;
+        object-fit: cover;
+        object-position: bottom;
+      }
+      svg {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      #sss {
+        height: rem(276);
+        width: rem(276);
+        top: 70%;
+        left: -20%;
+        z-index: 1;
+      }
+    }
+  }
+}

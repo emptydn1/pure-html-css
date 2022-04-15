@@ -1,0 +1,2 @@
+"use strict";for(var slide_content=document.querySelectorAll(".testimonial__content"),slide_button=document.querySelectorAll(".testimonial__button div"),remove=function(t,e){for(var i=0;i<t.length;i++)t[i].classList.remove("".concat(e))},i=0;i<slide_button.length;i++)slide_button[i].addEventListener("click",(function(t){remove(slide_button,"active"),this.classList.add("active");for(var e=this,i=0;e=e.previousElementSibling;i++);remove(slide_content,"active"),slide_content[i].classList.add("active")}));
+//# sourceMappingURL=1.js.map

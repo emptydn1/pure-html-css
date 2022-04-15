@@ -1,0 +1,47 @@
+@use '../utils' as *;
+
+.price {
+  &__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    background-color: #7f7770;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(2) {
+      background-color: #deb37e;
+      //   img {
+      //     order: 2;
+      //   }
+      .price__content {
+        order: -1;
+      }
+    }
+    img {
+      flex: 1;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .wrapper {
+    max-width: rem(516);
+  }
+  &__content {
+    flex: 1;
+    padding-left: rem(56);
+    text-align: left;
+    span {
+      font-size: rem(58.333);
+      line-height: 1.2;
+      padding-bottom: rem(54);
+      font-weight: 700;
+    }
+    p {
+      font-size: rem(27);
+      padding-bottom: rem(60);
+    }
+  }
+}

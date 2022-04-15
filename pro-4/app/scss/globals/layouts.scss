@@ -1,0 +1,112 @@
+@use "../utils" as *;
+
+.wrapper-all {
+  max-width: rem(1920);
+  margin: 0 auto;
+  background: url("../app/img/bg.jpg") no-repeat top / 100%;
+}
+
+// Spacing
+.container {
+  max-width: rem(1200);
+  margin: 0 auto;
+  padding-top: 0;
+  padding-right: rem(15);
+  padding-bottom: 0;
+  padding-left: rem(15);
+
+  &--supper {
+    padding-top: rem(280);
+    padding-bottom: rem(390);
+    @include breakpoint-down(medium) {
+      padding-top: rem(150);
+      padding-bottom: rem(250);
+    }
+    @include breakpoint-down(small) {
+      padding-top: rem(50);
+      padding-bottom: rem(100);
+    }
+  }
+  // &--big {
+  //   padding-top: rem(200);
+  //   padding-bottom: rem(200);
+  // }
+  &--small {
+    padding-top: rem(150);
+    padding-bottom: rem(200);
+    // @include breakpoint-down(medium) {
+    //   padding-top: rem(75);
+    //   padding-bottom: rem(100);
+    // }
+    // @include breakpoint-down(small) {
+    //   padding-top: rem(50);
+    //   padding-bottom: rem(66.6666667);
+    // }
+  }
+  &--bt {
+    padding-bottom: rem(200);
+    @include breakpoint-down(medium) {
+      padding-bottom: rem(100);
+    }
+    @include breakpoint-down(small) {
+      padding-bottom: rem(66.6666667);
+    }
+  }
+
+  //   &--pall {
+  //     padding-top: 4.375rem;
+  //     padding-right: 1.5rem;
+  //     padding-bottom: 4.375rem;
+  //     padding-left: 1.5rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-top: 6rem;
+  //       padding-bottom: 6rem;
+  //     }
+  //   }
+  //   &--py {
+  //     padding-top: 4.375rem;
+  //     padding-bottom: 4.375rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-top: 6rem;
+  //       padding-bottom: 6rem;
+  //     }
+  //   }
+  //   &--px {
+  //     padding-right: 1.5rem;
+  //     padding-left: 1.5rem;
+  //   }
+  //   &--pt {
+  //     padding-top: 4.375rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-top: 6rem;
+  //     }
+  //   }
+  //   &--pr {
+  //     padding-right: 1.5rem;
+  //   }
+  //   &--pb {
+  //     padding-bottom: 4.375rem;
+
+  //     @include breakpoint-up(large) {
+  //       padding-bottom: 6rem;
+  //     }
+  //   }
+  //   &--pl {
+  //     padding-left: 1.5rem;
+  //   }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none !important;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint(large) {
+    display: none !important;
+  }
+}
